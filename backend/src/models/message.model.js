@@ -1,8 +1,8 @@
-import { image } from "framer-motion/client";
+
 import mongoose from "mongoose";
 
 const messageSchema = new mongoose.Schema({
-  sender: {
+  senderId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true,
@@ -12,7 +12,7 @@ const messageSchema = new mongoose.Schema({
     ref: "User",
     required: true
   },
-  text: { type: String, required: true },
+  text: { type: String },
   image: { type: String },
 },
   { timestamps: true }
