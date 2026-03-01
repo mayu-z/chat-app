@@ -40,12 +40,12 @@ The application is architected as a set of micro-services managed by Docker:
 ### Quick Start (Docker)
 The easiest way to run the project is using Docker Compose, which handles the network bridging between the frontend and backend automatically.
 
-```bash
- 1. Clone the repo
+
+# 1. Clone the repo
 git clone [https://github.com/mayu-z/chat-app.git](https://github.com/mayu-z/chat-app.git)
 cd chat-app
 
- 2. Start the services
+ #2. Start the services
 docker-compose up --build
 
 The application will be available at:
@@ -55,7 +55,7 @@ Frontend: http://localhost:3000
 Backend API: http://localhost:5000
 
 📂 Project Structure
-
+```bash
 .
 ├── backend/           # Express server & Socket logic
 │   ├── controllers/   # Request handlers
@@ -65,12 +65,13 @@ Backend API: http://localhost:5000
 │   ├── src/components # Reusable UI units
 │   └── src/store      # State management
 └── docker-compose.yml # Container orchestration
+```
 
 👤 Author
 Mayuresh Singh
 
-Portfolio: mayuu.me
+Portfolio: [mayuu.me](www.mayuu.me)
 
-GitHub: @mayu-z
+GitHub: ```@mayu-z```
 
-LinkedIn: mayu-esh
+LinkedIn: [mayu-esh](https://www.linkedin.com/in/mayu-esh/)
