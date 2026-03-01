@@ -1,91 +1,49 @@
-Chat App (MERN + Docker)
-A real-time, full-stack chat application built to demonstrate seamless communication, modern UI/UX, and containerized deployment. This project leverages the MERN stack (MongoDB, Express, React, Node.js) and Socket.io for instantaneous messaging.
+# 💬 Real-Time Chat Application
 
-🚀 Features
-Real-time Messaging: Instant message delivery and receipt using WebSockets.
+A high-performance, full-stack chat application built with the **MERN** stack. This project demonstrates real-time bidirectional communication, secure authentication, and a fully containerized deployment workflow.
 
-User Authentication: Secure login and signup with JWT (JSON Web Tokens).
 
-Online Status: Real-time tracking of online/offline users.
 
-Responsive Design: Optimized for both desktop and mobile views using Tailwind CSS.
+## 🚀 Key Features
 
-Containerized: Fully Dockerized for "one-command" setup and consistent environments.
+* **Real-time Messaging:** Powered by **Socket.io** for sub-100ms latency.
+* **Persistent Storage:** Conversation history and user profiles managed via **MongoDB**.
+* **Authentication:** Secure user sessions using **JWT** (JSON Web Tokens) and HTTP-only cookies.
+* **Containerization:** Environment parity using **Docker** and **Docker Compose**.
+* **State Management:** Lightweight and reactive UI state handling (Zustand/Context API).
+* **Modern Styling:** Responsive, dark-mode ready interface built with **Tailwind CSS**.
 
-Modern UI: Clean, minimalist interface with a focus on user experience.
+## 🏗 System Architecture
 
-🛠 Tech Stack
-Frontend: React.js, Tailwind CSS, DaisyUI
+The application is architected as a set of micro-services managed by Docker:
 
-Backend: Node.js, Express.js
+1.  **Frontend (React):** A SPA that handles the UI and WebSocket client.
+2.  **Backend (Node/Express):** The REST API and Socket.io server.
+3.  **Database (MongoDB):** NoSQL storage for users and messages.
 
-Database: MongoDB
 
-Real-time Engine: Socket.io
 
-Containerization: Docker, Docker Compose
+## 🛠 Tech Stack
 
-State Management: Zustand (or your preferred library)
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React, Tailwind CSS, DaisyUI |
+| **Backend** | Node.js, Express.js, Socket.io |
+| **Database** | MongoDB, Mongoose |
+| **DevOps** | Docker, Docker Compose |
 
-📦 Getting Started
-Prerequisites
-Docker
+## 📦 Getting Started
 
-Docker Compose
+### Prerequisites
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
 
-Installation & Setup
-Clone the repository:
+### Quick Start (Docker)
+The easiest way to run the project is using Docker Compose, which handles the network bridging between the frontend and backend automatically.
 
-Bash
-
-git clone https://github.com/mayu-z/chat-app.git
+```bash
+# 1. Clone the repo
+git clone [https://github.com/mayu-z/chat-app.git](https://github.com/mayu-z/chat-app.git)
 cd chat-app
-Environment Variables:
-Create a .env file in the backend directory (and frontend if required) based on the provided logic:
 
-Code snippet
-
-PORT=5000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
-NODE_ENV=development
-Run with Docker Compose:
-This will build the images and start the frontend, backend, and database containers automatically.
-
-Bash
-
+# 2. Start the services
 docker-compose up --build
-Access the App:
-
-Frontend: http://localhost:3000
-
-Backend API: http://localhost:5000
-
-🐳 Docker Architecture
-The project is split into three main services defined in docker-compose.yml:
-
-Client: The React frontend.
-
-Server: The Express/Node.js API.
-
-Database: MongoDB instance (if not using Atlas).
-
-📂 Project Structure
-Plaintext
-
-chat-app/
-├── backend/           # Node.js & Express server, Socket.io logic
-├── frontend/          # React application, Tailwind styles
-├── docker-compose.yml # Orchestration for containers
-└── project.md         # Detailed technical notes
-🛡 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-👤 Author
-Mayuresh Singh
-
-GitHub: @mayu-z
-
-Portfolio: mayuu.me
-
-LinkedIn: mayu-esh
